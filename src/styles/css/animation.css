@@ -1,0 +1,23 @@
+@keyframes slideX {
+    0% {
+        transform: translateX(-500%) ;
+    }
+    
+
+    100% {
+        transform: translateX(0%) ;
+    }
+
+}
+
+
+@keyframes slideY {
+    0% {
+        transform: translateY(-500%) ;
+    }
+    
+
+    100% {
+        transform: translateY(0%) ;
+    }
+}
