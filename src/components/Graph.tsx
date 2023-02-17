@@ -9,7 +9,7 @@ interface Edgeprops {
 
 const Graph = ({top, left, rotate}:Edgeprops) => {
     const [bold, setBold] = useState(false)
-    const mouseHandler = (e) => {
+    const mouseHandler = (e:any) => {
         e.preventDefault()
         setBold(true)
     }
