@@ -4,88 +4,56 @@
 @import "./graph.css";
 
 .home-page{
-
     height: 99vh;
     width: 100vw;
 }
 
 .container{
+    background-color: aliceblue;
     display: flex;
-    justify-content: center;
-    height: 100%;
-    
-
+    align-items: center;
+    height: fit-content ;
+    margin-top: 15%;
+    padding: 2rem;
+    box-shadow: -0.5rem -0.5rem 1rem rgb(202, 190, 190), 0.5rem 0.5rem 1rem rgb(202, 190, 190), 0.5rem -0.5rem 1rem rgb(202, 190, 190), -0.5rem 0.5rem 1rem rgb(202, 190, 190),
+     -0.4rem -0.4rem 0.2rem rgb(202, 190, 190), -0.4rem 0.4rem 0.4rem rgb(202, 190, 190), 0.4rem -0.4rem 0.4rem rgb(202, 190, 190),
+      0.3rem 0.3rem 0.1rem rgb(202, 190, 190), -0.3rem -0.3rem 0.1rem rgb(202, 190, 190), 0.4rem 0.4rem 0.1rem rgb(202, 190, 190), -0.4rem -0.4rem 0.1rem rgb(202, 190, 190); 
 }
+
+.competences {
+    background-color: aliceblue;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0 -7% 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 .title{
-    margin: auto;
+    
     display: flex;
     flex-direction: column;
-    z-index: 2;
-    background-color: aquamarine;
+    background-color: rgb(36, 73, 61);
     box-shadow: 0.1rem .1rem 0.1rem grey;
-    justify-content: center;
-    width: 35vw;
     font-family: 'Montserrat';
-    text-decoration:antiquewhite; 
     align-items: center;
+    color: white; 
+    height: 10vh;
+    width: 30vw;
     justify-content: center;
+    margin: 1% auto;
     transition: all 1s;
+    h1{
+        font-size: 1rem;
+    }
 
 }
 
-.title{
-   order: 1;
-   height: 10%;
-   width: 30%;
-   margin: auto;
-   display: flex;
-   align-items: center;
-    
-}
 
 
-nav{
-order: 2;
-height: 0%;
-font-family: 'Montserrat';  
-color: rgb(92, 42, 139);
-display: flex;
-align-items: center;
-margin: auto;
-background: linear-gradient(to right , rgb(208, 221, 208) , rgb(186, 186, 255) );
-box-shadow: 0.3rem 0.3rem 0.3rem rgb(149, 155, 206);
-}
 
-.link{
-    text-decoration: none;
-    color: rgb(154, 192, 49);
-    position: absolute;
-    background-color: black;
-    border-radius: 5px;
-    padding: 1%;
-    box-shadow: 0.05rem .05rem 0.3rem grey;
-    opacity: 0;
-    outline: 3px solid grey;
-    
 
-}
-
-.link:first-child{
-    
-   
-    
-    
-}
-.link:nth-child(2){
-   ;
-   
-}
-.link:nth-child(3){
-   
-}
-.link:nth-child(4){
-   
-}
 
 
 
@@ -94,18 +62,24 @@ box-shadow: 0.3rem 0.3rem 0.3rem rgb(149, 155, 206);
     bottom: 0;
     left: 0;
     height: 10vh;
-    background: linear-gradient(to right , rgb(208, 221, 208) , rgb(212, 212, 250) );
+    background: linear-gradient(to right , aliceblue , rgb(212, 212, 250) );
     width: 100%;
     display: flex;
-    box-shadow: -0.2rem -0.2rem 0.3rem rgb(185, 161, 161);
-        a{ 
-        justify-content: flex-start;
-        img{
-           height: 3vh; 
-            
-        }
-        }
     align-items: center;
-    p {font-family: "Montserrat"; }
-   
+    div{
+        
+        a{  display: inline;
+            justify-content: flex-start;
+            
+            img{
+               height: 3vh;
+               align-items: center; 
+                
+            }
+            }
+        
+        p {font-family: "Montserrat"; font-size: 0.7rem; display: inline-block;}
     }
+       
+   
+}

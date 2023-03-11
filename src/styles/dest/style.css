@@ -1,5 +1,7 @@
 body{
     height: 99vh;
+    margin: 0;
+  
  } 
 @keyframes slideX {
     0% {
@@ -25,6 +27,12 @@ body{
 #root{
     margin: 0;
     padding: 0;
+    text-align: center;
+} 
+.home-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 } 
 .test-page{
     height: 100vh;
@@ -33,124 +41,92 @@ body{
     position: relative;
 } 
 .graph{
-    position: absolute;
-    height: 25vh;
-    width: 4vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    margin: 0 1%;
     
 } 
 .node{
- border-left: 1px solid rgb(163, 163, 196);
- flex: 3;
- 
+    margin-top: 4%;
+    border-radius: 1%;
+    height: 60px;
+    width: 150px;
+    box-shadow: 0.07rem  0.07rem .1rem rgb(190, 37, 37) ;
+    transition: box-shadow .5s ease-in; 
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
 } 
 .edge{
-    
-    border-radius: 50%;
-    height: 4vh;
-    width: 4vh;
-    border: 1px solid rgb(163, 163, 196) ;
-
+    height: 5px;
+    width: 5px;
+    background-color: black;
 } 
 .home-page{
-
     height: 99vh;
     width: 100vw;
 } 
 .container{
+    background-color: aliceblue;
     display: flex;
-    justify-content: center;
-    height: 100%;
-    
-
+    align-items: center;
+    height: -moz-fit-content ;
+    height: fit-content ;
+    margin-top: 15%;
+    padding: 2rem;
+    box-shadow: -0.5rem -0.5rem 1rem rgb(202, 190, 190), 0.5rem 0.5rem 1rem rgb(202, 190, 190), 0.5rem -0.5rem 1rem rgb(202, 190, 190), -0.5rem 0.5rem 1rem rgb(202, 190, 190),
+     -0.4rem -0.4rem 0.2rem rgb(202, 190, 190), -0.4rem 0.4rem 0.4rem rgb(202, 190, 190), 0.4rem -0.4rem 0.4rem rgb(202, 190, 190),
+      0.3rem 0.3rem 0.1rem rgb(202, 190, 190), -0.3rem -0.3rem 0.1rem rgb(202, 190, 190), 0.4rem 0.4rem 0.1rem rgb(202, 190, 190), -0.4rem -0.4rem 0.1rem rgb(202, 190, 190); 
+} 
+.competences {
+    background-color: aliceblue;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0 -7% 0;
+    opacity: 0;
+    transition: opacity 1s;
 } 
 .title{
-    margin: auto;
+    
     display: flex;
     flex-direction: column;
-    z-index: 2;
-    background-color: aquamarine;
+    background-color: rgb(36, 73, 61);
     box-shadow: 0.1rem .1rem 0.1rem grey;
-    justify-content: center;
-    width: 35vw;
     font-family: 'Montserrat';
-    -webkit-text-decoration:antiquewhite;
-            text-decoration:antiquewhite; 
     align-items: center;
+    color: white; 
+    height: 10vh;
+    width: 30vw;
     justify-content: center;
+    margin: 1% auto;
     transition: all 1s;
 
 } 
-.title{
-   order: 1;
-   height: 10%;
-   width: 30%;
-   margin: auto;
-   display: flex;
-   align-items: center;
-    
-} 
-nav{
-order: 2;
-height: 0%;
-font-family: 'Montserrat';  
-color: rgb(92, 42, 139);
-display: flex;
-align-items: center;
-margin: auto;
-background: linear-gradient(to right , rgb(208, 221, 208) , rgb(186, 186, 255) );
-box-shadow: 0.3rem 0.3rem 0.3rem rgb(149, 155, 206);
-} 
-.link{
-    text-decoration: none;
-    color: rgb(154, 192, 49);
-    position: absolute;
-    background-color: black;
-    border-radius: 5px;
-    padding: 1%;
-    box-shadow: 0.05rem .05rem 0.3rem grey;
-    opacity: 0;
-    outline: 3px solid grey;
-    
-
-} 
-.link:first-child{
-    
-   
-    
-    
-} 
-.link:nth-child(2){
-   ;
-   
-} 
-.link:nth-child(3){
-   
-} 
-.link:nth-child(4){
-   
-} 
+.title h1{
+        font-size: 1rem;
+    } 
 .footer{
     position: absolute;
     bottom: 0;
     left: 0;
     height: 10vh;
-    background: linear-gradient(to right , rgb(208, 221, 208) , rgb(212, 212, 250) );
+    background: linear-gradient(to right , aliceblue , rgb(212, 212, 250) );
     width: 100%;
     display: flex;
-    box-shadow: -0.2rem -0.2rem 0.3rem rgb(185, 161, 161);
-   
-    } 
-.footer a{ 
-        justify-content: flex-start;
-        } 
-.footer a img{
-           height: 3vh; 
-            
-        } 
-.footer{
     align-items: center;
+       
+   
 } 
-.footer p {font-family: "Montserrat"; }
+.footer div a{  display: inline;
+            justify-content: flex-start;
+            } 
+.footer div a img{
+               height: 3vh;
+               align-items: center; 
+                
+            } 
+.footer div p {font-family: "Montserrat"; font-size: 0.7rem; display: inline-block;}

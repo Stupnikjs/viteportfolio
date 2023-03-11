@@ -1,78 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../layout/Footer';
-import CustomLink from '../components/CustomLink';
 import { CSSProperties } from 'react';
 import Graph from '../components/Graph';
+import { faGithub, faLinkedin, faGoogle, faDocker, faReact, faJsSquare, faGolang } from '@fortawesome/free-brands-svg-icons';
+import Icon from '../components/Icon';
 
 // lien github linkedin
 // representer un graph qui se construit  
 
 
-interface Css {
-    [key:string]: string
-}
-
-interface CustomLinkProps {
-    href: string, 
-    onMouseOver: Function, 
-    style: CSSProperties
-
-}
-
 
 const Home = () => {
-
-    const graphProp1 = {
-        
-    }
-    const graphProp2 = {
-        top: "30%",
-        left: "20%",
-        rotate: "140deg"
-    }
-    const graphProp3 = {
-        top: "50%",
-        left: "40%",
-        rotate: "40deg"
-    }
-
-    const getRandomGraphProp = (n:number) => {
-        let random = Math.round(Math.random())*20
-        return {
-            top: `${(n*10).toString()}%`,
-            left: `${(10+Math.pow(2, n)-random).toString()}%`,
-            rotate: `${(random+n).toString()}deg`
-        }
-    }
-
-
-    useEffect(() =>{
-        
-
-    },[])
-        
-        
-    
+    const [display, setDisplay] = useState(false)
      
+    const Array1 = 
+        [
+            { title: "Competences", style : { backgroundColor: "", margin: "0% 0"}}, 
+            { title: "Projets", style : { backgroundColor: ""}}, 
+            { title: "A propos", style : { backgroundColor: ""}}, 
+    
+        ] 
+       
+    const Array2 = 
+        [
+            { title: "Competences", style : { backgroundColor: "", margin: "0% 0"}}, 
+            { title: "Competences", style : { backgroundColor: ""}}, 
+            { title: "Competences", style : { backgroundColor: ""}}, 
+    
+        ] 
+       
 
     return (
         <div className='home-page'>
-                <Graph {...getRandomGraphProp(2)}></Graph>
-                <Graph {...getRandomGraphProp(4)}></Graph>
-                <Graph {...getRandomGraphProp(5)}></Graph>
-                <Graph {...getRandomGraphProp(6)}></Graph>
-                <Graph {...getRandomGraphProp(1)}></Graph>
-                <Graph {...getRandomGraphProp(5)}></Graph>
-                <Graph {...getRandomGraphProp(6)}></Graph>
-                <Graph {...getRandomGraphProp(1)}></Graph>
-                <div className="container"> 
-                    <div className="title">
-                                Mon Portfolio de Developpeur Javascript / Data Scientist
+                    <div className='competences' style={{opacity: display? "1": "0"}}> 
+                        <Icon size="3rem" icon={faDocker}></Icon>
+                        <Icon size="3rem" icon={faReact}></Icon>
+                        <Icon size="3rem" icon={faJsSquare}></Icon>
+                        <Icon size="3rem" icon={faGolang}></Icon>
                     </div>
-                </div>
+                    
+                    <div className="container">
+                        <Graph Array={Array1} setDisplayCompetences={setDisplay}></Graph>
+                        <div className='title-container'>
+                            <div className="font-div" style={{ display: "flex", justifyContent:"center", gap: "2%"}}>
+                                <Icon size="1.5rem" icon={faGithub}></Icon>
+                                <Icon  size="1.5rem" icon={faLinkedin}></Icon>
+                                <Icon size="1.5rem" icon={faGoogle}></Icon>
+                            </div>
+                            <div className="title">
+                                        
+                                    <h1>Mon Portfolio de Developpeur Javascript/GoogleCloud</h1> 
+                            </div>
+                        </div>
+                        
+                        <Graph Array={Array2}></Graph>
+                    </div>
+                    
         <Footer></Footer>
         </div>
     );
 };
 
-export default Home;
+export default Home; 

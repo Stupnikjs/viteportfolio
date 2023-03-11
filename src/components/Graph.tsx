@@ -1,39 +1,29 @@
 import React, {useEffect, useState} from 'react';
-import Edge from './Edge';
+import Node from './Node';
 
-
-interface Edgeprops {
-    [key:string] : string
+interface Obj {
+    title: string, 
+    style : React.CSSProperties
 }
 
+interface Props {
+    Array: Obj[] , 
+    setDisplayCompetences?:Function, 
+}
 
-const Graph = ({top, left, rotate}:Edgeprops) => {
-    const [bold, setBold] = useState(false)
-    const mouseHandler = (e:any) => {
-        e.preventDefault()
-        setBold(true)
-    }
-    useEffect(() => {
-    let interval = setInterval(()=> {
-        setBold(!bold)
-     }, 1000) 
-     return () => {
-        clearInterval(interval)
-     }
-    }, [bold])
+const Graph = ({Array, setDisplayCompetences}:Props) => {
+
+  
 
     return (
-        <div className='graph' onMouseOver={mouseHandler} style={{
-            top: top, 
-            left: left, 
-            transform: `rotate(${rotate})`
-            
-        }}>
-            <Edge></Edge>
-                <div className='node' style={{
-                    outline: bold? ".5px solid grey": "none"
-                }}></div>
-            <Edge></Edge>
+        <div className='graph'  >
+                   {
+                    Array.map((el:Obj) => {
+                        return <Node Text={el.title} setDisplay={setDisplayCompetences} NodeStyle={el.style}></Node>
+                    })
+                   } 
+                    
+                  
         </div>
     );
 };
